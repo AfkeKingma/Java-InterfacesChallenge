@@ -1,12 +1,21 @@
 package com.company;
 
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        firstName firstName = new firstName("Afke");
+        save(firstName);
+
+    }
+
+    public static void save (ISaveable values) {
+        for(int i = 0; i <= values.write().size(); i++){
+            System.out.println(values.write().get(i));
+        }
     }
 
     public static ArrayList<String> readValues() {
@@ -34,4 +43,6 @@ public class Main {
         }
         return values;
     }
+
+
 }
